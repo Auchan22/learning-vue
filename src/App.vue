@@ -1,17 +1,31 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your app Vue.js + TypeScript App"/>
+  <CustomComponent :user="user"  />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import CustomComponent from '@/components/CustomComponent.vue';
+import { User } from './interfaces/User';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    CustomComponent
   },
+  data(): {user:User}{
+    return {
+      user: {
+        name: "Agustin",
+        mail: "agus@gmail.com",
+        age: 21,
+        isLoggedIn: false
+      }
+    }
+  }
 });
 </script>
 
