@@ -1,17 +1,20 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <CustomComponent :user="user"  />
+  <PostWrapper />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CustomComponent from '@/components/CustomComponent.vue';
 import type { User } from './interfaces/User';
+import PostWrapper from './components/Post/PostWrapper.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    CustomComponent
+    CustomComponent,
+    PostWrapper
   },
   data(): {user:User}{
     return {
