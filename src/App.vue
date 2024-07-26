@@ -4,6 +4,7 @@
   <PostWrapper />
   <CounterOption />
   <CounterComposition />
+  <ClassBind />
 </template>
 
 <script lang="ts">
@@ -13,6 +14,7 @@ import type { User } from './interfaces/User';
 import PostWrapper from './components/Post/PostWrapper.vue';
 import CounterOption from './components/Counter/CounterOption.vue';
 import CounterComposition from './components/Counter/CounterComposition.vue';
+import ClassBind from './components/Bind/ClassBind.vue';
 
 export default defineComponent({
   name: 'App',
@@ -20,7 +22,8 @@ export default defineComponent({
     CustomComponent,
     PostWrapper,
     CounterOption,
-    CounterComposition
+    CounterComposition,
+    ClassBind
   },
   data(): {user:User}{
     return {
